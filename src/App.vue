@@ -11,6 +11,9 @@
       <div class="tab-item">
         <router-link to="/sellers">商家</router-link>
       </div>
+      <div class="tab-item">
+        <router-link to="/bar">Go to Bar</router-link>
+      </div>
     </div>
     <keep-alive>
       <router-view></router-view>
@@ -42,6 +45,10 @@ export default {
       this.seller = response.body.seller;
       this.ratings = response.body.ratings;
     });
+  },
+  mounted () {
+    let u = navigator.userAgent;
+    console.log(u);
   }
 };
 </script>
